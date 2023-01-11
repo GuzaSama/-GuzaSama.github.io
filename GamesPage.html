@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "CSS/GamePageStyle.css">
+        <title>Guza Hub</title>
+    </head>
+    <body>
+        <!-- This is the section tag for the moving wave background -->
+        <section class = "background">
+            <!-- Each index of a wave represents the different layers with the fourth being the wave furthest back -->
+            <div class = "wave1"></div>
+            <div class = "wave2"></div>
+            <div class = "wave3"></div>
+            <div class = "wave4"></div>
+            <a href = "index.html"><img src="img/Logo.png" class="Logo"></a>
+            <a href = "Chess.html"><img class="slide1" id = "slide1" src="img/Chess.png"></a>
+            <a href = "Checkers.html"><img class="slide2" id = "slide2" src="img/Checkers.png"></a>
+            <img class="leftbutton" onclick="PreviousSlide()" src = "img/leftarrow.png">
+            <img class="rightbutton" onclick="NextSlide()" src = "img/rightarrow.png">
+            <div class = "top_bar_menu">
+                <a href = "GamesPage.html"><img src = "img/gamesicon.png" class = "gamesicon"></a>
+                <a href = "ShopPage.html"><img src = "img/shopicon.png" class = "shopicon"></a>
+                <a href = "VideosPage.html"><img src = "img/videosicon.png" class = "videosicon"></a>
+                <img class = "profileicon" src = "img/profileicon.png">
+                <div class = "profilemenu">
+                </div>
+                <a href = "DocumentPage.html"><img src = "img/documenticon.png" class = "documenticon"></a>
+            </div>
+            <div class = "loginpage" id = "loginpage">
+                <img src = "img/exitbutton.png" onclick = "document.getElementById('loginpage').style.visibility = 'hidden';" class = "exitbuttonloginpage">
+            </div>
+
+        </section>
+        <script src = "JS/GamePageScripts.js"></script>
+    </body>
+</html>

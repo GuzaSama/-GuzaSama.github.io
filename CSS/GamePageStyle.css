@@ -1,0 +1,283 @@
+body
+{
+    margin: 0;
+}
+/* This controls the style of the background section which contains the wave animation */
+.background
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image : linear-gradient(rgb(37, 36, 36), rgb(100, 99, 99));
+}
+/* This is the styling for the front wave the waves are mostly similiar in styling except for some key differences i will explain inline */
+.wave1
+{
+    /* positioning and sizing */
+    position:absolute;
+    /* this is the only positioning proprety that changes between the different waves so they will be in different heights. this changes the distance of the waves from the bottom of the page. */
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 100px;
+    background: url(../img/wave.png);
+    background-size:1000px 100px;
+    /* This line is very important and actually makes the wave move. animate stands for the name of the animation we defined later on. 30s stands for the time it will take for the animation to finish and if we
+    decide so, to repeat itself. linear stands for how it will execute the animation within the 30 seconds, mostly irrelivant it just states it will move at a constant rate. infinite means it will repeat itself
+    until said otherwise. */
+    animation: animate 30s linear infinite;
+    /* This line states where the wave will stand in the line of 4 waves. The higher z-index will come before the lower z-index - if two objects overlap eachother the object with the higher z- index will
+    be fully shown while the object with the lower z-index will only be shown in the areas where he isn't covered by the object with the higher z-index. */
+    z-index:1000;
+    /* stands for the transparency of the object */
+    opacity: 1;
+    /* stands for when the animation will start in contrast to the other animations. don't get this wrong, all the animations will work when you load the page but some animations will start at a more
+    advanced stage of their animation. */
+    animation-delay: 0s;
+}
+/* This is where the animation of waves 1 and 3 is defined. 0% is for the starting state of the object and 100% is it's ending point where it will end the animation and repeat it if we want it to.
+background-position-x is the location of the object on the x axis - width. it will go from it's starting position to 1000px to the right of the starting position in the time stated in the unique css of each wave,
+for example wave1 does this animation in 30 seconds. */
+@keyframes animate
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+.wave2
+{
+    position:absolute;
+    bottom:10px;
+    left:0;
+    width:100%;
+    height: 100px;
+    background: url(../img/wave.png);
+    background-size:1000px 100px;
+    animation: animate2 15s linear infinite;
+    z-index:999;
+    opacity: 0.7;
+    animation-delay: -5s;
+}
+/* This is where the animation of waves 2 and 4 is defined. The only difference between this animation and the animation of the other waves is the background-position-x value which is -1000px instead of 1000px 
+which makes it go left instead of right. */
+@keyframes animate2
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+.wave3
+{
+    position:absolute;
+    bottom:15px;
+    left:0;
+    width:100%;
+    height: 100px;
+    background: url(../img/wave.png);
+    background-size:1000px 100px;
+    animation: animate 20s linear infinite;
+    z-index:998;
+    opacity: 0.5;
+    animation-delay: -2s;
+}
+.wave4
+{
+    position:absolute;
+    bottom:20px;
+    left:0;
+    width:100%;
+    height: 100px;
+    background: url(../img/wave.png);
+    background-size:1000px 100px;
+    animation: animate2 5s linear infinite;
+    z-index:997;
+    opacity: 0.6;
+    animation-delay: -5s;
+}
+.Logo
+{
+    position:absolute;
+    top: 3%;
+    left: 40%;
+    background: none;
+    z-index: 1000;
+}
+.slide1
+{
+    position: absolute;
+    left:38%;
+    top:26%;
+}
+.slide2
+{
+    position: absolute;
+    left:38%;
+    top:26%;
+}
+.slide3
+{
+    position: absolute;
+    left:38%;
+    top:26%;
+}
+.leftbutton
+{
+    position:absolute;
+    left: 37%;
+    top: 47%;
+    height: 6%;
+    width: 3%;
+    transition: 0.3s;
+}
+.leftbutton:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.rightbutton
+{
+    position:absolute;
+    right: 37%;
+    top: 47%;
+    height: 6%;
+    width: 3%;
+    transition: 0.3s;
+}
+.rightbutton:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.top_bar_menu
+{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(158, 32, 32);
+    opacity: 0.3;
+    z-index: 999;
+}
+.gamesicon
+{
+    position:absolute;
+    right: 3%;
+    top: 26%;
+    transition: 0.3s;
+}
+.shopicon
+{
+    position:absolute;
+    right: 28%;
+    top: 20%;
+    transition: 0.3s;
+}
+.shopicon:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.gamesicon:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.videosicon
+{
+    position:absolute;
+    right: 15%;
+    top: 26%;
+    transition: 0.3s;
+}
+.videosicon:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.loginpage
+{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    width: 20%;
+    height: 50%;
+    border-radius: 2%;
+    background-image: linear-gradient(rgb(192, 94, 94), rgb(167, 11, 11));
+    opacity: 0.5;
+}
+.profileicon
+{
+    position: absolute;
+    left: 1%;
+    top: 10%;
+    transition: 0.3s;
+}
+.profileicon:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.exitbuttonloginpage
+{
+    position:absolute;
+    right: 5%;
+    top: 5%;
+}
+.profilemenu
+{
+    position: absolute;
+    left: 4.3%;
+    top: 100%;
+    background-image: linear-gradient(rgb(192, 94, 94), rgb(167, 11, 11));
+    opacity: 0.3;
+    transition: 0.3s;
+    height: 1%;
+    width: 1%;
+    visibility: hidden;
+    transition-delay: 0.1s;
+}
+.profileicon:hover + .profilemenu 
+{
+    left: 0%;
+    top: 100%;
+    height: 300%;
+    width: 10%;
+    transition: 0.3s;
+    visibility: visible;
+    opacity: 0.8;
+    border-bottom-right-radius: 10px;
+}
+.profilemenu:hover
+{
+    left: 0%;
+    top: 100%;
+    height: 300%;
+    width: 10%;
+    transition: 0.3s;
+    visibility: visible;
+    opacity: 0.8;
+    border-bottom-right-radius: 10px;
+}
+.documenticon
+{
+    position: absolute;
+    left: 29.5%;
+    top: 19%;
+    transition: 0.3s;
+}
+.documenticon:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
